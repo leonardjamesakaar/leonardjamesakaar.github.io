@@ -1,0 +1,38 @@
+/* Reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-page background image */
+body {
+    background: url('images/lyric01.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Filmotype LaCrosse Regular', serif;
+    font-weight: normal;
+    text-transform: none;
+}
+
+/* Centered overlay with crumpled paper background */
+.overlay {
+    background: url('images/crumpled-paper.jpg') no-repeat center center;
+    background-size: cover;
+    color: black;
+    padding: 80px 120px; /* Large padding for box */
+    font-size: 4rem; /* Large font size */
+    text-align: center;
+    border-radius: 40px;
+    box-shadow: 0 0 180px 90px rgba(0, 0, 0, 0.5); /* Feathered effect */
+    position: relative;
+}
+
+/* Text styling with shadow for contrast */
+.overlay p {
+    text-shadow: 4px 4px 16px rgba(255, 255, 255, 2); /* Light shadow for contrast */
+    margin: 0;
+}
