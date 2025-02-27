@@ -1,0 +1,29 @@
+/* Ensure the container takes up the full viewport */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Background image styling */
+.container {
+    background: url('images/sunshinyDay.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10%;
+}
+
+/* Text box styling */
+.text-box {
+    background: rgba(255, 255, 255, 0.7); /* semi-transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 60%;
+    max-width: 600px;
+    color: #333;
+}
