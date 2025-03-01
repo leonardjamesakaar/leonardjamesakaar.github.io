@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Full-Screen Scroll Transition</title>
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Fixed background container holding full-screen background images -->
+  <div id="bg">
+    <div class="bg-img" data-index="0" style="background-image: url('images/image1.jpg');"></div>
+    <div class="bg-img" data-index="1" style="background-image: url('images/image2.jpg');"></div>
+    <div class="bg-img" data-index="2" style="background-image: url('images/image3.jpg');"></div>
+    <div class="bg-img" data-index="3" style="background-image: url('images/image4.jpg');"></div>
+    <div class="bg-img" data-index="4" style="background-image: url('images/image5.jpg');"></div>
+  </div>
+
+  <!-- Scrollable container for text boxes; each section takes up the full viewport -->
+  <div class="container">
+    <div class="text-box" data-index="0">
+      <p>A Statue's Lullabye:</p>
+    </div>
+    <div class="text-box" data-index="1">
+      <p>And now I lay,</p>
+    </div>
+    <div class="text-box" data-index="2">
+      <p>To rest alone,</p>
+    </div>
+    <div class="text-box" data-index="3">
+      <p>As if my love</p>
+    </div>
+    <div class="text-box" data-index="4">
+      <p>Were made of stone.</p>
+    </div>
+  </div>
+  
+  <!-- Link to the external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
