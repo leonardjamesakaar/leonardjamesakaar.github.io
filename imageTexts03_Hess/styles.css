@@ -1,0 +1,68 @@
+/* Reset default margins and paddings for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure html and body take full height */
+html, body {
+  height: 100%;
+  font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+}
+
+/* Fixed background container that fills the viewport */
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Each background image covers the full screen and fades in/out */
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* The active background image is visible */
+.bg-img.active {
+  opacity: 1;
+}
+
+/* Scrollable container for text boxes with scroll-snap enabled */
+.container {
+  height: 100vh;              /* Full viewport height */
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* Each text box takes up the full viewport and centers its content */
+.text-box {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Styling for paragraph text - font-size increased by 200% */
+.text-box p {
+  font-size: 2.9em;
+  max-width: 800px;
+}
