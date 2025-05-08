@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fullscreen Video with Audio Buttons</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.buttons .audio-button {
+    font-family: Baskerville, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, serif;
+}
+</style>
+</head>
+<body>
+  <video id="background-video" loop muted>
+    <source src="videos/video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="buttons">
+    <button class="audio-button" onclick="selectAudio('audio1')">Please.</button>
+    <button class="audio-button" onclick="selectAudio('audio2')">Don't</button>
+    <button class="audio-button" onclick="selectAudio('audio3')">Change.</button>
+  </div>
+
+  <audio id="audio1" src="audio/track1.mp3" loop></audio>
+  <audio id="audio2" src="audio/track2.mp3" loop></audio>
+  <audio id="audio3" src="audio/track3.mp3" loop></audio>
+
+  <script>
+    const video = document.getElementById('background-video');
+    const audioElements = [
+      document.getElementById('audio1'),
+      document.getElementById('audio2'),
+      document.getElementById('audio3')
+    ];
+
+    let initialized = false;
+
+    function selectAudio(activeId) {
+      if (!initialized) {
+        video.play();
+        audioElements.forEach(audio => {
+          audio.volume = 0;
+          audio.play();
+        });
+        initialized = true;
+      }
+
+      audioElements.forEach(audio => {
+        audio.volume = (audio.id === activeId) ? 1 : 0;
+      });
+    }
+  </script>
+</body>
+</html>
